@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loading">Cargando, por favor, espere...</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="app_name">PhotoSpat</string>
+    <string name="errorToast">Tu conexión a Internet puede no estar activa: </string>
+</resources>
