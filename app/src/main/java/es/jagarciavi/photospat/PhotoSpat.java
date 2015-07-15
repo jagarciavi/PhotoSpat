@@ -45,7 +45,7 @@ public class PhotoSpat extends AppCompatActivity {
                 if (progressDialog == null) {
                     // If no progress dialog, make one and set message
                     progressDialog = new ProgressDialog(activity);
-                    progressDialog.setMessage("Cargando, por favor, espere...");
+                    progressDialog.setMessage(getResources().getString(R.string.loading));
                     progressDialog.show();
 
                     // Hide the webview while loading
@@ -85,7 +85,7 @@ public class PhotoSpat extends AppCompatActivity {
             }
 
             public void onReceivedError(WebView view, int errorCod,String description, String failingUrl) {
-                Toast.makeText(PhotoSpat.this, "Your Internet Connection May not be active Or " + description, Toast.LENGTH_LONG).show();
+                Toast.makeText(PhotoSpat.this, getResources().getString(R.string.errorToast) + description, Toast.LENGTH_LONG).show();
             }
 
         });

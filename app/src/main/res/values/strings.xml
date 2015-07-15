@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">PhotoSpat</string>
-
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="loading">Loading, please wait...</string>
+    <string name="errorToast">Your Internet Connection May not be active: </string>
 </resources>
