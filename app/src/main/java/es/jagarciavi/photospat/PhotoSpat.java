@@ -2,6 +2,7 @@ package es.jagarciavi.photospat;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -85,7 +86,19 @@ public class PhotoSpat extends AppCompatActivity {
             }
 
             public void onReceivedError(WebView view, int errorCod,String description, String failingUrl) {
+                // Disable webview and progress dialog in app because of an error
+                webview.setEnabled(false);
+                setContentView(R.layout.activity_photo_spat);
+                progressDialog.dismiss();
+                // Show error message (in future versions it will be changed by dialog error
                 Toast.makeText(PhotoSpat.this, getResources().getString(R.string.errorToast) + description, Toast.LENGTH_LONG).show();
+                // Exit the app after 5s
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        finish();
+                    }
+                }, 5000);
             }
 
         });
