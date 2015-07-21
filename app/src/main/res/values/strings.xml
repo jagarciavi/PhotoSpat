@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="loading">Loading, please wait...</string>
     <string name="errorToast">Your Internet Connection May not be active: </string>
+    <string name="errorDialogTitle">No connection</string>
+    <string name="errorDialogMessage">It seems to have no connection. PhotoSpat requires an active Internet connection.</string>
 </resources>

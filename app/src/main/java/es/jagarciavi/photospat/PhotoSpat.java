@@ -1,8 +1,12 @@
 package es.jagarciavi.photospat;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Handler;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +19,7 @@ import android.widget.Toast;
 
 public class PhotoSpat extends AppCompatActivity {
 
+    private static final String TAG = "PhotoSpat";
     private WebView webview;
     private ProgressDialog progressDialog;
     private int counter = 0;
@@ -57,30 +62,31 @@ public class PhotoSpat extends AppCompatActivity {
                 // Page is done loading;
                 // hide the progress dialog and show the webview
 
-                Log.i(null, "The app is in the onPageFinished method");
+                Log.i(TAG, "The app is in the onPageFinished method");
 
                 String finalUrl = webview.getUrl().toString();
 
-                Log.i(null, "finalurl string is " + finalUrl);
+                Log.i(TAG, "finalurl string is " + finalUrl);
 
                 if (finalUrl.equals("https://instagram.com/accounts/login/")) {
                     if(firstLoad == 1) {
-                        Log.i(null, "The strings are equal, we'll set counter value to 4");
+                        Log.i(TAG, "The strings are equal, we'll set counter value to 4");
                         counter = 4;
                     } else {
-                        Log.i(null, "It's not the load of the login page...");
+                        Log.i(TAG, "It's not the load of the login page...");
                         firstLoad = 1;
                     }
                 }
 
                 if (progressDialog.isShowing() && counter == 4) {
-                    Log.i(null, "On loop -> Dismiss progress dialog ");
+                    Log.i(TAG, "On loop -> Dismiss progress dialog ");
                     progressDialog.dismiss();
+                    // Improve this
                     //progressDialog = null;
                     webview.setEnabled(true);
                     counter = 0;
                 }
-                Log.i(null, "Counter value is " + counter);
+                Log.i(TAG, "Counter value is " + counter);
                 counter++;
             }
 
@@ -89,17 +95,19 @@ public class PhotoSpat extends AppCompatActivity {
                 webview.setEnabled(false);
                 setContentView(R.layout.activity_photo_spat);
                 progressDialog.dismiss();
-                Log.i(null, "Received error: " + errorCod + description + failingUrl);
-                // Show error message (in future versions it will be changed by dialog error
-                Toast.makeText(PhotoSpat.this, getResources().getString(R.string.errorToast) + description, Toast.LENGTH_LONG).show();
-                // Exit the app after 5s
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                        Log.i(null, "The app will finish now");
-                        finish();
-                    }
-                }, 5000);
+                Log.i(TAG, "Received error: " + errorCod + " " + description + " " + failingUrl);
+
+                // Show dialog with error
+                new AlertDialog.Builder(PhotoSpat.this)
+                        .setTitle(getResources().getString(R.string.errorDialogTitle))
+                                .setMessage(getResources().getString(R.string.errorDialogMessage))
+                                .setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // The app will finish now
+                                        finish();
+                                    }
+                                })
+                                .show();
             }
 
         });
