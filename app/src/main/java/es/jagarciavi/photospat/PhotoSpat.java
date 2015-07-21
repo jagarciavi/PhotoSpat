@@ -2,17 +2,13 @@ package es.jagarciavi.photospat;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-<<<<<<< HEAD
 import android.os.Handler;
-=======
->>>>>>> 32bcbe4969ed98553044abc7ab49357a194ae65e
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
-import android.webkit.WebChromeClient;
+//import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -88,24 +84,22 @@ public class PhotoSpat extends AppCompatActivity {
                 counter++;
             }
 
-            public void onReceivedError(WebView view, int errorCod,String description, String failingUrl) {
-<<<<<<< HEAD
+            public void onReceivedError(WebView view, int errorCod, String description, String failingUrl) {
                 // Disable webview and progress dialog in app because of an error
                 webview.setEnabled(false);
                 setContentView(R.layout.activity_photo_spat);
                 progressDialog.dismiss();
+                Log.i(null, "Received error: " + errorCod + description + failingUrl);
                 // Show error message (in future versions it will be changed by dialog error
                 Toast.makeText(PhotoSpat.this, getResources().getString(R.string.errorToast) + description, Toast.LENGTH_LONG).show();
                 // Exit the app after 5s
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     public void run() {
+                        Log.i(null, "The app will finish now");
                         finish();
                     }
                 }, 5000);
-=======
-                Toast.makeText(PhotoSpat.this, getResources().getString(R.string.errorToast) + description, Toast.LENGTH_LONG).show();
->>>>>>> 32bcbe4969ed98553044abc7ab49357a194ae65e
             }
 
         });
