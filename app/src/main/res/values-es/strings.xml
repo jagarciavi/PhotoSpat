@@ -4,6 +4,6 @@
     <string name="action_settings">Ajustes</string>
     <string name="app_name">PhotoSpat</string>
     <string name="errorToast">Tu conexión a Internet puede no estar activa: </string>
-    <string name="errorDialogTitle">Sin conexón</string>
+    <string name="errorDialogTitle">Sin conexión</string>
     <string name="errorDialogMessage">Parece que no tiene conexión. PhotoSpat requiere una conexión a Internet activa.</string>
 </resources>
