@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jagarciavi/PhotoSpat.svg)](https://travis-ci.org/jagarciavi/PhotoSpat)
+
 <h1 align="center">
 <sub>
 <img  src="https://raw.githubusercontent.com/jagarciavi/PhotoSpat/master/app/src/main/res/mipmap-hdpi/ic_launcher.png"
@@ -5,7 +7,6 @@
       width="38">
 </sub>
 PhotoSpat
-<a href="https://travis-ci.org/jagarciavi/PhotoSpat"><img alt="Build Status" src="https://travis-ci.org/jagarciavi/PhotoSpat.svg"></a>
 </h1>
 
 **An Android WebApp for Instagram on older devices.**
