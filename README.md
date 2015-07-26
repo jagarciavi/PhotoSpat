@@ -7,7 +7,7 @@
 PhotoSpat
 [![Build Status](https://travis-ci.org/jagarciavi/PhotoSpat.svg)](https://travis-ci.org/jagarciavi/PhotoSpat)
 <br>
-<sub><sub><h5> An Android WebApp for Instagram on older devices.<h5></sub></sub>
+<sub><sub><h5> An Android WebApp for Instagram on older devices.</h5></sub></sub>
 </h1>
 
 
