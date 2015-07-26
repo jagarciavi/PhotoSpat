@@ -6,10 +6,9 @@
 </sub>
 PhotoSpat
 <a href="https://travis-ci.org/jagarciavi/PhotoSpat"><img alt="Build Status" src="https://travis-ci.org/jagarciavi/PhotoSpat.svg"></a>
-<br>
-<sub><sub><h5> An Android WebApp for Instagram on older devices.</h5></sub></sub>
 </h1>
 
+**An Android WebApp for Instagram on older devices.**
 
 <!--## Features-->
 
