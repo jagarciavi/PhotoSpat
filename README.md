@@ -1,6 +1,15 @@
-# PhotoSpat [![Build Status](https://travis-ci.org/jagarciavi/PhotoSpat.svg)](https://travis-ci.org/jagarciavi/PhotoSpat)
+<h1 align="center">
+<sub>
+<img  src="https://raw.githubusercontent.com/jagarciavi/PhotoSpat/master/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+      height="38"
+      width="38">
+</sub>
+PhotoSpat
+[![Build Status](https://travis-ci.org/jagarciavi/PhotoSpat.svg)](https://travis-ci.org/jagarciavi/PhotoSpat)
+<br>
+<sub><sub><h5> An Android WebApp for Instagram on older devices.<h5></sub></sub>
+</h1>
 
-An Android WebApp for Instagram on older devices (like HTC Wildfire)
 
 <!--## Features-->
 
