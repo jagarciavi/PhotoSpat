@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/jagarciavi/PhotoSpat.svg)](https://travis-ci.org/jagarciavi/PhotoSpat)
 
+***
+
 <h1 align="center">
 <sub>
 <img  src="https://raw.githubusercontent.com/jagarciavi/PhotoSpat/master/app/src/main/res/mipmap-hdpi/ic_launcher.png"
